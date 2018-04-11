@@ -1,0 +1,25 @@
+(flaskEnv) C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice>python server.py
+Traceback (most recent call last):
+  File "server.py", line 4, in <module>
+    mysql = MySQLConnector(app,'friendsdb')
+  File "C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice\mysqlconnection.py", line 40, in MySQLConnector
+    return MySQLConnection(app, db)
+  File "C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice\mysqlconnection.py", line 9, in __init__
+    'database': friendsdb, # we got db as an argument
+NameError: global name 'friendsdb' is not defined
+
+(flaskEnv) C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice>code mysqlconnection.py
+
+(flaskEnv) C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice>code mysqlconnection.py
+
+(flaskEnv) C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice>python server.py
+Traceback (most recent call last):
+  File "server.py", line 4, in <module>
+    mysql = MySQLConnector(app,'friendsdb')
+  File "C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice\mysqlconnection.py", line 40, in MySQLConnector
+    return MySQLConnection(app, db)
+  File "C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice\mysqlconnection.py", line 9, in __init__
+    'database': friendsdb, # we got db as an argument
+NameError: global name 'friendsdb' is not defined
+
+(flaskEnv) C:\Users\Tyler Bergstrom\Dropbox\CD\Python\Practice>

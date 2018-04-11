@@ -1,0 +1,19 @@
+1. Route
+
+@app.route('/')
+query = "select * from friends"
+
+@app.route('/add_user')
+# accept post info, combine with sql query, send that query 
+query = "insert into friends (name, occupation, created_at, updated_at)"
+values (:name)
+return redirect('/')
+
+@app.route('/update/<user_id>')
+query = "select * from user where id = :id"
+data = {id: user_id}
+return render)template("update_form.html", user)
+
+@app.route('/delete/<user_id>')
+query = "delete from user where id = :id"
+return redirect('/')

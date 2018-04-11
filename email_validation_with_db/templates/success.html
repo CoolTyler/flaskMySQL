@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Email Validation with DB</title>
+  </head>
+  <body>
+    <h1>Registered E-mails: </h1>
+    <!-- with messages gets us the variable "messages" from the get_flashed_messages() function -->
+    {% with messages = get_flashed_messages(category_filter=["wrong"]) %}
+    <!-- "if messages" Checks if there are even any messages that came back from the get_flashed_messages() function -->  
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}   
+    {% with messages = get_flashed_messages(category_filter=["success"]) %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% for email in emails: %}
+      <p>E-mail:  {{email['email']}} {{email['created_at']}}</p>
+    {% endfor %}
+    <form action="/process" method="POST">
+    Email:<input type="text" name="email">
+    <input type="submit" value="Submit">
+    </form>
+    
+      
+    
+  
+  </body>
+  </html>
+  
